@@ -1,4 +1,4 @@
-# This is my package filament-custom-forms
+# Found missing form in filamentphp here
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/rupadana/filament-custom-forms.svg?style=flat-square)](https://packagist.org/packages/rupadana/filament-custom-forms)
 [![Total Downloads](https://img.shields.io/packagist/dt/rupadana/filament-custom-forms.svg?style=flat-square)](https://packagist.org/packages/rupadana/filament-custom-forms)
@@ -19,13 +19,12 @@ composer require rupadana/filament-custom-forms
 
 ```php
 InputGroup::make(3)
-            ->label('Input Group')
-            ->schema([
-                TextInput::make('first'),
-                Select::make('second'),
-                ColorPicker::make('third'),
-            ])
-```
+    ->label('Input Group')
+    ->schema([
+        TextInput::make('first'),
+        Select::make('second'),
+        ColorPicker::make('third'),
+    ])
 
 
 Show child Label

@@ -10,11 +10,11 @@ use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
+use Rupadana\FilamentCustomForms\Commands\FilamentCustomFormsCommand;
+use Rupadana\FilamentCustomForms\Testing\TestsFilamentCustomForms;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Rupadana\FilamentCustomForms\Commands\FilamentCustomFormsCommand;
-use Rupadana\FilamentCustomForms\Testing\TestsFilamentCustomForms;
 
 class FilamentCustomFormsServiceProvider extends PackageServiceProvider
 {

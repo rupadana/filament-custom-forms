@@ -21,8 +21,6 @@ class InputGroup extends Grid
 
         $static->extraAttributes(['class' => 'filament-input-group gap-y-2 grid']);
 
-        $static->columnSpan(1);
-
         return $static;
     }
 

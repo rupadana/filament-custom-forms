@@ -2,6 +2,10 @@
 
 All notable changes to `filament-custom-forms` will be documented in this file.
 
+## Fix bug - 2023-10-02
+
+**Full Changelog**: https://github.com/rupadana/filament-custom-forms/compare/3.0.1...3.0.2
+
 ## Update - 2023-10-02
 
 ### What's Changed

@@ -59,21 +59,6 @@ class InputGroup extends Grid
 
         return $this->evaluate($components);
     }
-    // /**
-    //  * @return array<Component>
-    //  */
-    // public function getChildComponents(): array
-    // {
-    //     $components = $this->getChildComponents();
-
-    //     if ($this->isHideChildLabel) {
-    //         $components = collect($components)->map(function (Field $component) {
-    //             return $component->hiddenLabel();
-    //         })->toArray();
-    //     }
-
-    //     return $this->evaluate($components);
-    // }
 
     protected function setUp(): void
     {

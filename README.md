@@ -25,6 +25,7 @@ InputGroup::make(3)
         Select::make('second'),
         ColorPicker::make('third'),
     ])
+```
 
 
 Show child Label

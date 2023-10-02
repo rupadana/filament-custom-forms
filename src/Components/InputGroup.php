@@ -10,6 +10,7 @@ use Filament\Forms\Components\Grid;
 class InputGroup extends Grid
 {
     use HasLabel;
+    protected bool $isHideChildLabel = true;
 
     protected string $view = 'filament-custom-forms::components.grid';
 

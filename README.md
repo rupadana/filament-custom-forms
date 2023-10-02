@@ -19,12 +19,12 @@ composer require rupadana/filament-custom-forms
 
 ```php
 InputGroup::make(3)
-            ->label('Input Group')
-            ->schema([
-                TextInput::make('first'),
-                Select::make('second'),
-                ColorPicker::make('third'),
-            ])
+    ->label('Input Group')
+    ->schema([
+        TextInput::make('first'),
+        Select::make('second'),
+        ColorPicker::make('third'),
+    ])
 ```
 
 

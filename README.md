@@ -21,10 +21,23 @@ composer require rupadana/filament-custom-forms
 InputGroup::make(3)
             ->label('Input Group')
             ->schema([
-                TextInput::make('first')->hiddenLabel()->placeholder("first"),
-                Select::make('second')->placeholder("second")->hiddenLabel(),
-                ColorPicker::make('third')->placeholder("third")->hiddenLabel(),
+                TextInput::make('first'),
+                Select::make('second'),
+                ColorPicker::make('third'),
             ])
+```
+
+
+Show child Label
+
+```php
+InputGroup::make(3)
+    ->showChildLabel()
+    ->schema([
+        TextInput::make('first'),
+        Select::make('second'),
+        ColorPicker::make('third'),
+    ])
 ```
 
 ## Changelog

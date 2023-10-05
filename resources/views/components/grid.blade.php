@@ -1,7 +1,3 @@
-@php
-
-@endphp
-
 <div {{ $attributes ->merge([
     'id' => $getId(),
     ], escape: false)

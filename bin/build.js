@@ -48,3 +48,9 @@ compile({
     entryPoints: ['./resources/js/index.js'],
     outfile: './resources/dist/filament-custom-forms.js',
 })
+
+compile({
+    ...defaultOptions,
+    entryPoints: ['./resources/js/slider.js'],
+    outfile: './resources/dist/components/slider.js',
+})

@@ -16,6 +16,7 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
+
 class FilamentCustomFormsServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-custom-forms';
@@ -102,7 +103,8 @@ class FilamentCustomFormsServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            // AlpineComponent::make('filament-custom-forms', __DIR__ . '/../resources/dist/components/filament-custom-forms.js'),
+            AlpineComponent::make('slider', __DIR__ . '/../resources/dist/components/slider.js'),
+            Css::make('slider', __DIR__ . '/../resources/dist/components/slider-custom.css'),
             Css::make('filament-custom-forms-styles', __DIR__ . '/../resources/dist/filament-custom-forms.css'),
             // Js::make('filament-custom-forms-scripts', __DIR__ . '/../resources/dist/filament-custom-forms.js'),
         ];

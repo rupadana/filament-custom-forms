@@ -2,8 +2,8 @@
 
 namespace Rupadana\FilamentCustomForms\Components\Concerns;
 
-
-class InputSliderBehaviour {
+class InputSliderBehaviour
+{
     const DRAG = 'drag';
 
     const DRAGALL = 'drag-all';
@@ -15,8 +15,8 @@ class InputSliderBehaviour {
     const SNAP = 'snap';
 
     const UNCONSTRAINED = 'unconstrained';
-    
+
     const HOVER = 'hover-snap';
-    
+
     const NONE = 'none';
 }

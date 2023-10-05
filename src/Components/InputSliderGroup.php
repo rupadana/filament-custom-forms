@@ -2,7 +2,6 @@
 
 namespace Rupadana\FilamentCustomForms\Components;
 
-use Closure;
 use Error;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Concerns\CanBeValidated;
@@ -10,16 +9,14 @@ use Filament\Forms\Components\Concerns\HasChildComponents;
 use Filament\Forms\Components\Concerns\HasHelperText;
 use Filament\Forms\Components\Concerns\HasHint;
 use Filament\Forms\Components\Concerns\HasLabel;
-use Filament\Forms\Components\Field;
-use Illuminate\Support\Arr;
 
 class InputSliderGroup extends Component
 {
-    use HasLabel;
-    use HasHelperText;
-    use HasHint;
     use CanBeValidated;
     use HasChildComponents;
+    use HasHelperText;
+    use HasHint;
+    use HasLabel;
 
     protected string $view = 'filament-custom-forms::components.input-slider';
 
@@ -46,9 +43,9 @@ class InputSliderGroup extends Component
     public static function make(): static
     {
         $static = new static;
+
         return $static;
     }
-
 
     /**
      * Get the value of max
@@ -115,7 +112,7 @@ class InputSliderGroup extends Component
      */
     public function getBehaviour(): string
     {
-        return join("-", $this->behaviour);
+        return implode('-', $this->behaviour);
     }
 
     /**
@@ -163,7 +160,7 @@ class InputSliderGroup extends Component
      *
      * @return  self
      */
-    public function sliders(array   $sliders)
+    public function sliders(array $sliders)
     {
         $this->sliders = $sliders;
 
@@ -185,7 +182,6 @@ class InputSliderGroup extends Component
         })
             ->toArray();
 
-
         return $states;
     }
 
@@ -198,24 +194,22 @@ class InputSliderGroup extends Component
         })
             ->toArray();
 
-
         return $start;
     }
 
     /**
      * Get the value of connect
-     */ 
+     */
     public function getConnect()
     {
 
-        if($this->connect) {
-            if(!(count($this->connect) == count($this->getSliders()) + 1)) {
-                throw new Error("connect property must be total sliders + 1 ");
+        if ($this->connect) {
+            if (! (count($this->connect) == count($this->getSliders()) + 1)) {
+                throw new Error('connect property must be total sliders + 1 ');
             }
 
             return $this->connect;
         }
-
 
         return array_fill(0, count($this->getSliders()) + 1, false);
     }
@@ -224,7 +218,7 @@ class InputSliderGroup extends Component
      * Set the value of connect
      *
      * @return  self
-     */ 
+     */
     public function connect(array $connect)
     {
         $this->connect = $connect;
@@ -234,14 +228,16 @@ class InputSliderGroup extends Component
 
     /**
      * Get the value of range
-     */ 
+     */
     public function getRange()
     {
-        if($this->range) return $this->range;
+        if ($this->range) {
+            return $this->range;
+        }
 
         return [
             'min' => $this->getMin(),
-            'max' => $this->getMax()
+            'max' => $this->getMax(),
         ];
     }
 
@@ -249,7 +245,7 @@ class InputSliderGroup extends Component
      * Set the value of range
      *
      * @return  self
-     */ 
+     */
     public function range(array $range)
     {
         $this->range = $range;
@@ -257,7 +253,8 @@ class InputSliderGroup extends Component
         return $this;
     }
 
-    public function enableTooltips(bool $condition = true) {
+    public function enableTooltips(bool $condition = true)
+    {
         $this->isEnableTooltips = $condition;
 
         return $this;
@@ -265,12 +262,13 @@ class InputSliderGroup extends Component
 
     /**
      * Get the value of tooltips
-     */ 
+     */
     public function getTooltips()
     {
 
-        if($this->tooltips) return $this->tooltips;
-
+        if ($this->tooltips) {
+            return $this->tooltips;
+        }
 
         return array_fill(0, count($this->getSliders()), $this->isEnableTooltips);
     }
@@ -279,7 +277,7 @@ class InputSliderGroup extends Component
      * Set the value of tooltips
      *
      * @return  self
-     */ 
+     */
     public function tooltips(array $tooltips)
     {
         $this->tooltips = $tooltips;

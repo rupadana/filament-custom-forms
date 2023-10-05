@@ -2,6 +2,10 @@
 
 All notable changes to `filament-custom-forms` will be documented in this file.
 
+## add input slider - 2023-10-05
+
+**Full Changelog**: https://github.com/rupadana/filament-custom-forms/compare/3.0.2...3.0.3
+
 ## Fix bug - 2023-10-02
 
 **Full Changelog**: https://github.com/rupadana/filament-custom-forms/compare/3.0.1...3.0.2
@@ -24,5 +28,6 @@ All notable changes to `filament-custom-forms` will be documented in this file.
 - Add InputGroup Component
 
 ## 3.0.1 - 2023-10-02
+
 - Add hideChildLabel
 - Modify Child Placeholder using Label
